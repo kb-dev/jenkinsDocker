@@ -12,6 +12,8 @@ services:
       - ./jenkins_home:/var/jenkins_home
       - ./jenkins_ssh:/home/jenkins
       - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - JAVA_OPTS="-Dhudson.model.DirectoryBrowserSupport.CSP="
 
 volumes:
   jenkins_home:
