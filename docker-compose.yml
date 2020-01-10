@@ -14,6 +14,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - JAVA_OPTS="-Dhudson.model.DirectoryBrowserSupport.CSP="
+      - JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
 
 volumes:
   jenkins_home:
