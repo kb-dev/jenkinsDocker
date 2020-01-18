@@ -31,6 +31,9 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
+## ElasticSearch
+sudo echo 'vm.max_map_count=262144' >> /etc/sysctl.conf
+
 sudo groupadd docker
 sudo usermod -aG docker jenkins
 sudo usermod -aG docker daemon
